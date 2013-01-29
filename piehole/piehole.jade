@@ -1,0 +1,23 @@
+head
+  title piehole
+  link(rel="stylesheet", href="piehole.css")
+
+body
+  .container
+    .chat-well
+      {{> chat}}
+      {{> input}}
+
+template(name="chat")
+  .chat-message-box
+    .ul
+      {{#each message}}
+        li
+          span.timestamp[{{displayTime timestamp}}]
+          span.name{{name}}
+          span.class{{text}}
+    {{/each}}
+
+template(name="input")
+  input#name_input(type="text", size="10")
+  input#chat_input(type="text", size="50")

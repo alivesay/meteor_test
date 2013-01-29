@@ -1,0 +1,24 @@
+@import 'nib';
+
+$controlBackgroundColor        = rgb(30,30,30);
+$controlForegroundColor        = rgb(255,255,255);
+$controlGradientColor          = rgb(30,30,30);
+$controlGradientHighlightColor = rgb(60,60,60);
+
+body
+  background-color: $controlBackgroundColor;
+
+
+.chat-message-box ul
+  border: 1px solid white;
+  list-style: none;
+
+.chat-message-box li
+  border-top: 1px 
+  background: linear-gradient(top, $controlGradientHighlightColor, $controlGradientColor);
+  color: $controlForegroundColor;
+  display: block;
+  min-height: 40px;
+
+.chat-message-box li span
+  padding-right: 10px;
